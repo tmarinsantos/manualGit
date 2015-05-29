@@ -1,0 +1,119 @@
+﻿GIT para NOOBs
+
+ 
+*configuración: Enlaces de descargas
+Descarga git para OSX 
+Descarga git para Windows 
+Descarga git para Linux 
+*Crea un repositorio nuevo: 
+Un repositorio no es mas que el directorio contenedor de tu proyecto ( remoto o local) al cual git le hará seguimiento.
+Creamos un directorio nuevo o elegimos una existente, lo abrimos y ejecutamos:
+git init
+para crear un nuevo repositorio de git. 
+*Hacer checkout a un repositorio
+Creamos la copia local de ese repositorio:
+git clone /path/to/repository
+
+Si esta en un servidor remoto (Github por ejemplo) ejecutamos:
+git clone username@host:/path/to/repository 
+
+
+
+
+
+*Flujo de trabajo
+El repositorio local esta compuesto por tres "árboles" administrados por git. El primero es tu Directorio de trabajo que contiene los archivos, el segundo es el Index que actua como una zona intermedia, y el último es el HEAD que apunta al último commit realizado. 
+ 
+* add & commit
+Para “guardar” cambios (añadirlos al Index) :
+git add <filename>
+git add .
+Este es el primer paso en el flujo de trabajo básico. Para hacer commit a estos cambios usa
+git commit -m "Commit message"
+Ahora el archivo esta incluido en el HEAD, pero aún no en tu repositorio remoto. 
+* envío de cambios
+Los cambios están ahora en el HEAD de la copia local. 
+Para enviar estos cambios a al repositorio remoto usamos:
+
+git push origin master
+
+Reemplaza master por la rama a la que quieres enviar tus cambios. 
+
+
+
+Si no has clonado un repositorio ya existente y quieres conectar tu repositorio local a un repositorio remoto, usa
+git remote add origin <server>
+Ahora podrás subir tus cambios al repositorio remoto seleccionado.
+*ramas
+Las ramas son utilizadas para desarrollar funcionalidades separadas.
+La rama master es la rama "por defecto" cuando creas un repositorio. 
+Creamos nuevas ramas durante el desarrollo con nombres que tenga que ver con los cambios o funcionalidades añadidas/cambiadas, y las fusionamos a la rama principal al terminar:
+
+ 
+
+
+
+
+
+
+
+Creamos una nueva rama y nos cambiamos:
+git branch rama_funcion_x
+git checkout -b rama_funcion_x
+
+vuelvemos a la rama principal
+git checkout master
+
+y para borrar la rama
+git branch -d feature_x
+
+Una rama nueva no estará disponible para los demás a menos que subas (push) la rama a tu repositorio remoto
+git push origin <branch> 
+*actualiza & fusiona
+Para actualizar el repositorio local al commit más nuevo en el directorio de trabajo y para bajar y fusionar los cambios remotos.
+git pull
+
+Para fusionar otra rama a la rama activa (por ejemplo master), utiliza
+git merge <branch>
+en ambos casos git intentará fusionar automáticamente los cambios, pero no siempre será posible y se podrán producir conflictos. Nosotros somos los responsables de fusionar esos conflictos manualmente al editar los archivos mostrados por git. 
+Después de modificarlos, hay que marcarlos como fusionados con
+git add <filename>
+
+Antes de fusionar los cambios, se pueden revisar con
+git diff <source_branch> <target_branch> 
+*etiquetas
+Se recomienda crear etiquetas para cada nueva versión publicada de un software. Este concepto no es nuevo, ya que estaba disponible en SVN. Puedes crear una nueva etiqueta llamada 1.0.0 ejecutando
+git tag 1.0.0 1b2e1d63ff
+1b2e1d63ff se refiere a los 10 caracteres del commit id al cual quieres referirte con tu etiqueta. Puedes obtener el commit id con 
+git log
+también puedes usar menos caracteres que el commit id, pero debe ser un valor único. 
+*reemplaza cambios locales
+En caso de que hagas algo mal (lo que seguramente nunca suceda ;) puedes reemplazar cambios locales usando el comando
+git checkout -- <filename>
+Este comando reemplaza los cambios en tu directorio de trabajo con el último contenido de HEAD. Los cambios que ya han sido agregados al Index, así como también los nuevos archivos, se mantendrán sin cambio. 
+Por otro lado, si quieres deshacer todos los cambios locales y commits, puedes traer la última versión del servidor y apuntar a tu copia local principal de esta forma
+git fetch origin
+git reset --hard origin/master 
+*datos útiles
+Interfaz gráfica por defecto
+gitk
+Colores especiales para la consola
+git config color.ui true
+Mostrar sólo una línea por cada commit en la traza
+git config format.pretty oneline
+Agregar archivos de forma interactiva
+git add -i 
+enlaces & recursos
+clientes gráficos
+GitX (L) (OSX, open source) 
+Tower (OSX) 
+Source Tree (OSX, free) 
+GitHub for Mac (OSX, free) 
+GitBox (OSX) 
+guías
+Git Community Book 
+Pro Git 
+Think like a git 
+GitHub Help 
+A Visual Git Guide 
+
