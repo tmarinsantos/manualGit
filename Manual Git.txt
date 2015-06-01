@@ -45,7 +45,7 @@ Si no has clonado un repositorio ya existente y quieres conectar tu repositorio 
 git remote add origin <server>
 Ahora podrás subir tus cambios al repositorio remoto seleccionado.
 *ramas
-Las ramas son utilizadas para desarrollar funcionalidades separadas.
+  Las ramas son utilizadas para desarrollar funcionalidades separadas.
 La rama master es la rama "por defecto" cuando creas un repositorio. 
 Creamos nuevas ramas durante el desarrollo con nombres que tenga que ver con los cambios o funcionalidades añadidas/cambiadas, y las fusionamos a la rama principal al terminar:
 

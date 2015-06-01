@@ -74,20 +74,135 @@
 </head>
 <body>
 	<header>
-		<h1>Cabecera</h1>
+		<h1>Manual GIT para Noob's</h1>
 	</header>
 	<div id="contenedor">
 		<article>
-			<p>Lorem fistrum ese que llega ahorarr esse benemeritaar sexuarl. Consectetur no te digo trigo por no llamarte Rodrigor exercitation va usté muy cargadoo qué dise usteer. Adipisicing al ataquerl ese hombree condemor por la gloria de mi madre condemor te voy a borrar el cerito no puedor ese pedazo de magna. Amatomaa sed nisi aute sexuarl ex quietooor. Jarl ese pedazo de eiusmod la caidita te voy a borrar el cerito irure exercitation minim. Irure eiusmod duis te voy a borrar el cerito.</p>
-			<p>Va usté muy cargadoo consequat eiusmod diodeno esse. Ese hombree ese que llega commodo torpedo consequat sexuarl qué dise usteer velit aliquip voluptate se calle ustée. Quietooor amatomaa apetecan está la cosa muy malar. Diodeno sed está la cosa muy malar aute no puedor me cago en tus muelas sit amet. Irure qui duis commodo no puedor ese que llega. Ullamco reprehenderit a wan officia se calle ustée nisi. Pupita consequat pecador la caidita al ataquerl.</p>
-			<p>Elit está la cosa muy malar aliquip no puedor la caidita ex diodeno adipisicing no puedor aliqua sit amet. La caidita commodo quietooor occaecat commodo ad. Labore ad te voy a borrar el cerito se calle ustée tempor quis jarl diodenoo diodeno. Consequat a wan consequat por la gloria de mi madre. Nisi labore benemeritaar commodo llevame al sircoo esse diodenoo consequat. Nisi de la pradera condemor minim dolore se calle ustée.</p>
-			<p>Lorem fistrum papaar papaar a peich velit a gramenawer. Sit amet benemeritaar te voy a borrar el cerito dolor aute te voy a borrar el cerito cillum nostrud al ataquerl labore officia. Consequat laboris no puedor diodenoo. Quietooor nostrud hasta luego Lucas no te digo trigo por no llamarte Rodrigor tiene musho peligro torpedo sed aliquip. Jarl et aliquip diodenoo me cago en tus muelas apetecan a gramenawer a wan te va a hasé pupitaa. Adipisicing ad ullamco dolore me cago en tus muelas quis occaecat laboris. Llevame al sircoo por la gloria de mi madre ut condemor dolor sexuarl sit amet esse eiusmod papaar papaar. Condemor voluptate tiene musho peligro veniam laboris fistro consectetur. Se calle ustée pecador diodeno benemeritaar diodeno ut.</p>
-			<p>Dolor elit ese que llega ese pedazo de se calle ustée. Magna ut elit consectetur qui cillum sit amet. Aliqua ese pedazo de ese pedazo de et amatomaa velit. A wan ese hombree de la pradera adipisicing te va a hasé pupitaa se calle ustée no te digo trigo por no llamarte Rodrigor a gramenawer magna. Sed cillum a peich al ataquerl. Laboris ad laboris officia aute dolore aute consectetur llevame al sircoo. Pupita me cago en tus muelas duis elit al ataquerl consequat ahorarr ese pedazo de ullamco ex hasta luego Lucas. Qué dise usteer por la gloria de mi madre laboris apetecan te va a hasé pupitaa consectetur aliquip ahorarr pupita et ut.</p>
-			<p>Adipisicing ad papaar papaar reprehenderit se calle ustée consectetur sed qui adipisicing. Al ataquerl jarl ese que llega la caidita eiusmod amatomaa tempor consequat. Commodo sed enim veniam pecador la caidita laboris no puedor aliquip. Pupita aliquip enim no te digo trigo por no llamarte Rodrigor commodo está la cosa muy malar. Ut fistro eiusmod mamaar pupita exercitation ese que llega. Laboris a gramenawer está la cosa muy malar officia. La caidita enim consectetur esse no te digo trigo por no llamarte Rodrigor ese que llega mamaar. Magna pecador qui dolor cillum et tempor velit dolor. Benemeritaar ut nostrud occaecat no puedor elit esse sexuarl occaecat.</p>
+		<h2><a name="creaRepositorio">Crea un repositorio nuevo:</a></h2>
+			<p>Un repositorio no es mas que el directorio contenedor de tu proyecto ( remoto o local) al cual git le hará seguimiento.</p>
+			<p>Creamos un directorio nuevo o elegimos uno existente, lo abrimos y ejecutamos:</p>
+			<p>:~> git init</p>
+			<p>para crear un nuevo repositorio de git.</p>
+			<a class="go-top" href="#">🔝🔝🔝🔝</a>
+		<h2><a name="checkout">Hacer checkout a un repositorio</a></h2>
+			<p>Creamos la copia local de ese repositorio:</p>
+			<p>:~>git clone /path/to/repository</p>
+			<p>Si esta en un servidor remoto (Github por ejemplo) ejecutamos:</p>
+			<p>:~>git clone username@host:/path/to/repository </p>
+			<a class="go-top" href="#">🔝🔝🔝🔝</a>
+		<h2><a name="Flujo">Flujo de trabajo</a></h2>
+			<p>El repositorio local esta compuesto por tres "árboles" administrados por git. El primero es tu Directorio de trabajo que contiene los archivos, el segundo es el Index que actua como una zona intermedia, y el último es el HEAD que apunta al último commit realizado.</p>
+			<div align="center"><img src="img/flujo.png"></div>
+			<a class="go-top" href="#">🔝🔝🔝🔝</a>
+		<h2><a name="addCommit">Add & commit</a></h2>
+			<p>Para “guardar” cambios (añadirlos al Index) :</p>
+			<p>:~>git add <filename></p>
+			<p>:~>git add .   (añade todos los archivos y carpetas del directorio)</p>
+			<p>Este es el primer paso en el flujo de trabajo básico. Para hacer commit a estos cambios ejecutamos:</p>
+			<p>:~>git commit -m "Commit message"</p>
+			<p>Ahora el archivo esta incluido en el HEAD, pero aún no en tu repositorio remoto.</p>
+			<a class="go-top" href="#">🔝🔝🔝🔝</a>
+		<h2><a name="cambios">Envío de cambios</a></h2>
+			<p>Los cambios están ahora en el HEAD de la copia local.</p>
+			<p>Para enviar estos cambios a al repositorio remoto usamos:</p>
+			<p>:~>git push origin master</p>
+			<p>Puedes reemplazar master por la rama a la que quieres enviar tus cambios.</p>
+			<p>Si no has clonado un repositorio ya existente y quieres conectar tu repositorio local a un repositorio remoto:</p>
+			<p>:~>git remote add origin <server></p>
+			<p>Ahora podremos subir cuañquier cambio al repositorio remoto seleccionado.</p>
+			<a class="go-top" href="#">🔝🔝🔝🔝</a>
+		<h2><a name="ramas">Ramas</a></h2>
+			<p>Las ramas se utilizan para desarrollar funcionalidades o contenido separados.</p>
+			<p>La rama master es la rama "por defecto" cuando creas un repositorio.</p>
+			<p>Creamos nuevas ramas durante el desarrollo con nombres que tenga que ver con los cambios o funcionalidades añadidas/cambiadas, y las fusionamos a la rama principal al terminar:</p>
+			<div align="center"><img src="img/addMerge.png"></div>
+			<p>Creamos una nueva rama y nos cambiamos:</p>
+			<p>:~>git branch rama_funcion_x</p>
+			<p>:~>git checkout -b rama_funcion_x</p>
+			<p>volvemos a la rama principal</p>
+			<p>:~>git checkout master</p>
+			<p>y para borrar la rama</p>
+			<p>:~>git branch -d feature_x</p>
+			<p>Una rama nueva no estará disponible para los demás a menos que la suba (push) al repositorio remoto</p>
+			<p>git push origin <branch></p>
+			<a class="go-top" href="#">🔝🔝🔝🔝</a>
+		<h2><a name="actuFusiona">Actualiza & fusiona</a></h2>
+			<p>Para actualizar el repositorio local al commit más nuevo en el directorio de trabajo y para bajar y fusionar los cambios remotos.</p>
+			<p>:~>git pull</p>
+			<p>Para fusionar otra rama a la rama activa (por ejemplo master):</p>
+			<p>:~>git merge <branch></p>
+			<p>en ambos casos git intentará fusionar automáticamente los cambios, pero no siempre será posible y se podrán producir conflictos. Nosotros somos los responsables de fusionar esos conflictos manualmente al editar los archivos mostrados por git.</p>
+			<p>Después de modificarlos, hay que marcarlos como fusionados con:</p>
+			<p>:~>git add <filename></p>
+			<p>Tenemos la opcion de revisar los cambios antes de fusionar con:</p>
+			<p>:~>git diff <source_branch> <target_branch></p>
+			<a class="go-top" href="#">🔝🔝🔝🔝</a>
+		<h2><a name="etiquietas">Etiquetas</a></h2>
+			<p>Se recomienda crear etiquetas para cada nueva versión publicada de un software. Este concepto no es nuevo, ya que estaba disponible en SVN. Puedes crear una nueva etiqueta llamada 1.0.0 ejecuto:</p>
+			<p>:~>git tag 1.0.0 8y4r3t54gg</p>
+			<p>8y4r3t54gg se refiere a los 10 caracteres del commit id al cual quieres referirte con tu etiqueta. Puedes sacar el commit id con:</p>
+			<p>:~>git log</p>
+			<p>también se pueden usar menos caracteres que el commit id, pero debe ser un valor único.</p>
+			<a class="go-top" href="#">🔝🔝🔝🔝</a>
+		<h2><a name="reemplaza">Reemplaza cambios locales</a></h2>
+			<p>En caso de que hagas algo mal (nunca! ;) puedes reemplazar cambios locales usando el comando</p>
+			<p>:~>git checkout -- <filename></p>
+			<p>Este comando reemplaza los cambios en tu directorio de trabajo con el último contenido de HEAD. Los cambios que ya han sido agregados al Index, así como también los nuevos archivos, se mantendrán sin cambio.</p>
+			<p>Por otro lado, si quieres deshacer todos los cambios locales y commits, puedes traer la última versión del servidor y apuntar a tu copia local principal, haz lo siguiente:</p>
+			<p>:~>git fetch origin</p>
+			<p>:~>git reset --hard origin/master</p>
+			<a class="go-top" href="#">🔝🔝🔝🔝</a>
+		<h2><a name="interesante">Datos de Interes</a></h2>
+			<p>*Interfaz gráfica por defecto:</p>
+			<p>gitk</p>
+			<p>*Colores especiales para la consola:</p>
+			<p>git config color.ui true</p>
+			<p>*Mostrar sólo una línea por cada commit en la traza:</p>
+			<p>git config format.pretty oneline</p>
+			<p>*Agregar archivos de forma interactiva:</p>
+			<p>git add -i </p>
+			<a class="go-top" href="#">🔝🔝🔝🔝</a>
 		</article>
-		<nav>nav</nav>
-		<aside>aside</aside>
+		<nav>
+			<h3>Indice</h3>
+				<ul>
+					<li><a href="#creaRepositorio">Crea un repositorio nuevo</a></li>
+					<li><a href="#checkout">Hacer checkout a un repositorio</a></li>
+					<li><a href="#Flujo">Flujo de trabajo</a></li>
+					<li><a href="#addCommit">Add & commit</a></li>
+					<li><a href="#cambios">Envío de cambios</a></li>
+					<li><a href="#ramas">Ramas</a></li>
+					<li><a href="#actuFusiona">Actualiza & fusiona</a></li>
+					<li><a href="#etiquietas">Etiquetas</a></li>
+					<li><a href="#reemplaza">Reemplaza cambios locales</a></li>
+					<li><a href="#interesante">Datos de Interes</a></li>
+				</ul>
+		</nav>
+		<aside>
+			<h3>Configuración:</3>
+				<ul>Enlaces de descargas
+					<li><a href="https://code.google.com/p/git-osx-installer/downloads/list?can=3">Descarga git para OSX</a></li>
+					<li><a href="http://msysgit.github.io/">Descarga git para Windows</a></li>
+					<li><a href="http://git-scm.com/book/en%2FGetting-Started-Installing-Git">Descarga git para Linux</a></li>
+				</ul>
+			<h3>Enlaces & recursos</3>
+				<ul>clientes gráficos:
+					<li><a href="http://gitx.laullon.com/">GitX (L) (OSX, open source)</a></li>
+					<li><a href="http://www.git-tower.com/">Tower (OSX)</a></li>
+					<li><a href="https://www.sourcetreeapp.com/">Source Tree (OSX, free)</a></li>
+					<li><a href="https://mac.github.com/">GitHub for Mac (OSX, free)</a></li>
+					<li><a href="https://itunes.apple.com/gb/app/gitbox/id403388357?mt=12">GitBox (OSX)</a></li>
+				</ul>
+				<ul>Guias:
+					<li><a href="http://git-scm.com/book/en/v2">Pro Git</a></li>
+					<li><a href="http://think-like-a-git.net/">Think like a git</a></li>
+					<li><a href="https://help.github.com/">GitHub Help</a></li>
+					<li><a href="http://marklodato.github.io/visual-git-guide/index-en.html">A Visual Git Guide</a></li>
+					<li><a href="http://git-scm.com/book/en/v2">Git Community Book</a></li>
+				</ul>
+				
+		</aside>
 	</div>
-	<footer>pie</footer>
+	<footer></footer>
 </body>
 </html>
