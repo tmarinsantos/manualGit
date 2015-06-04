@@ -1,13 +1,14 @@
-# manualGit
-Este es un projecto base para crear un manual de Git. 
-* La idea es que hagáis un fork del proyecto, que contiene una plantilla básica en HTML5, y a partir de allí creéis un manual de Git.
-* El manual debe estar explicado con vuestras palabras, de manera sencilla y debe cubrir los aspectos básicos del uso de Git y de GitHub.
-* Debe incluir capturas de pantalla propias.
-* Al acabar las explicaciones con vuestras palabras podéis incluir enlaces a fuentes externas que desarrollen más ampliamente los conceptos.
-* Podéis hacer un manual para el uso por consola o para el uso desde Eclipse.
-* Lo desarrollaréis por parejas.
-* Usando preferiblemente el workflow "Feature Branch Workflow" que estuvimos viendo.
+## manualGit
+![GIT logo](http://www.yellosoft.us/public/images/git.png)
+___
+Proyecto hecho entre los alumnos @tmarinsantos y @E-Chan.
 
+* El trabajo trata de ser una breve y concisa explicación sobre el uso de Git y Github, 
+cumpliendo a la vez con los requesitos del profesor entre los cuales se encuentra usar el uso "Feature Branch Workflow".
 
-
-
+Objetivos:
+- [x] Usar la plantilla HTML provista por el profesor y incluir nuestro propio texto
+- [x] Usar capturas propias
+- [x] Separar el HTML del CSS
+- [x] Hacer uso de Feature Branch Workflow
+- [ ] Expandir el contenido
