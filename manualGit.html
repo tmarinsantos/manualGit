@@ -10,7 +10,109 @@
 	</header>
 	<div id="contenedor">
 		<article>
-		<h2><a name="creaRepositorio">Crea un repositorio nuevo:</a></h2>
+		<h2><a name="creaRepositorio">Introducción</a></h2>
+			<p>Estamos en el 2015 y no queda otra, deberías aprender a usar GitHub.</p>
+			<p>
+			GitHub ha cambiado la manera en que desarollamos software, siendo ni mas ni menos que la herramienta y colaborativa por 
+			defecto para el desarollo del código libre en todo el mundo.
+			Que usarias cuando te interesa participar en la fusión mental mundial del cógido abierto? Github ni más ni menos.
+			</p>
+			<p>
+			Simplemente con registrate y ser un miembre de esta comunidad te estás codeando con la gente que hace que funcione Google y Facebook, que, aprovechando ahora que GitHub es lo que es, optan por desarollar su trabajo de una manera abierta, transparente y colaborativa.
+			</p>
+			<p>
+			Aún así es importante no caer en el generico fallo de pensar que GitHub está sólo a disposición de programadores.
+			GitHub ofrece una manera simple, comprensible, transparente y colaborativa de llevar a cabo cualquier proyecto, siempre y cuando el resultado de tu trabajo sea en forma de archivo en un ordenador.
+			</p>
+			<p>
+			Así un arquitecto podría trabajar de forma colaborativa en AutoCAD y diseñar con su equipo una catedral, y mientras uno diseña el exterior otro diseña los interiores, también podría darse el caso de que quisieramos grabar un corto de animación y tuvieramos a dibujantes encargados de animar diferentes escenas y un encargado de sonido, podrían estructurarse el trabajo de manera que github les sirviese como interfaz común a la hora de combinar el fruto de todos sus esfuerzos en la obra final.
+			</p>
+			<p>
+			Así que si tras leer lo anterior crees que github puede funcionar para ti vas a aprender todo lo necesario para ponerte en marcha con la mayor brevedad posible.
+			</p>
+			<a class="go-top" href="#">🔝</a>
+		<h2><a name="creaRepositorio">Que es Git?</a></h2>
+			<p>
+				Linus Torvalds, ni mas ni menos que el creador del archiconocido proyecto de software libre, Linux, es al que tenemos que dar las gracias por poder tirar de Git para administrar nuestros proyectos.
+				Git es un software de control de version, que signific que administra buestro proyecto sin sobreescribir ninguna parte del proyecto.
+			</p>
+			<a class="go-top" href="#">🔝</a>
+			<h2><a name="creaRepositorio">Por que usar Git?</a></h2>
+			<p>
+				Digamos que trabajas conjuntamente con un compañero sobre una página web, ambos decidís mejorar la página web de vuestro proyecto, obviando que el otro está trabajando sore otra mejora que ha considerado oportuna. Tu terminas el trabajo a las 12 lo subes y te vas a dormir, sin embargo él termina a la 1, y sube al servidor, todos sabemos que significa esto, un trabajo va a quedar sobreescrito, tapado por las azañas del otro, eso es, cuánto menos, indeseable.
+			</p>
+			<p>
+				Una aplicación de control de version como Git es lo que se encarga, entre otras cosas, de que esto no ocurra.
+			</p>
+			<a class="go-top" href="#">🔝</a>
+			<h2><a name="creaRepositorio">Glosario princial</a></h2>
+			<p>
+				Git, entre otras cosas, tiene una cantidad inmunda de terminos nuevos que debemos aprender si queremos poder exprimir todas sus fucniones, términos que aunque creamos estar familiarizados con la jerga de la informatia y la programción seguramente no hayamos oído antes de no estar versados en el uso de git.
+			</p>
+			<p>
+			Incluso algunas palabras puede que ya la conozcamos pero en el contexto de git puede significar otra cosa completamente.
+			</p>
+			<p>
+			Linea de comando: Es una herramienta ,no nativa en algunos casos, del sistema operativo que acepta comandos basados en texto para el uso de git
+			</p>
+			<p>
+			Repositoro: Es un directorio dónde residen los proyectos, comúnmente los usuarios de GitHub usan 'repo'.Puede ser tanto espacio físico en nuestro rdenador o puede ser almaenamiento en la nube de cualquier host incluyendo el mismo Github y puede contener cualquier tipo de datos.
+			</p>
+			<p>
+			Version Control: Básicamente el proposito de Git. se refiere a ir guardando instancias de tus trabajos anteriores y de cada cambio que hemos ido haciendo tanto nosotros como nuestros colaboradores.
+			</p>
+			<p>
+			Commit: El comando más poderoso de Git. Cuando haces un commit estás basciamente tomando una instantanea de tu trabajo, dándote a ti mismo un 'checkpoint' para que puedas volver atrás o reevaluar tus modificaciones.
+			</p>
+			<p>
+			Branch: ¿Cómo trabajan multiples personas sobre un mismo trabajo sin confundirse o pisarse mútuamente? Con el uso de Branch. Cada vez que haces un branch del proyecto prinipal estás creando tu propia versión del proyecto principal en el que eres libre de cambiar cualquier aspecto. Cuando hayas terminado es hora de hacer un Merge de vuelta a ese master.
+			</p>
+			<a class="go-top" href="#">🔝</a>
+			<h2><a name="creaRepositorio">Comandos especificos de git.</a></h2>
+			<p>Git se creó con proyectos muy grandes como Linux en mente, pero para el uso común de Git es suficiente con un par de comandos básicos. Todos estos empiezan por "git".</p>
+
+			<p>git init
+			Inicializa un repositorio git. Después de ejecutar este comando sobre una carpeta, deja de ser una carpeta normal y empieza a ser un repositorio Git y aceptará comandos git adicionales.</p>
+
+			<p>git config
+			Sirve para configurar Git por primera vez</p>
+
+			<p>git help
+			¿Has olvidado algún comando? Escribe este comando para mostrar una lista de los 21 comandos más comunes de git.</p>
+
+			<p>git status
+			Comprueba el estado de tu repositorio. Marca los cambios que están pendientes de ser 'commiteados'.</p>
+
+			<p>git add
+			A pesar de lo que pueda parecer por su nombre, no añade litaralmente archivos al repositorio, lo que hace es haces que esos archivos que tu ya hayas añadido al repo sean reconocidos por git, y que se incluyan el futuros commit.</p>
+
+			<p>git commit
+			tras hacer un cambio usa este comando para evidenciar tus cambios tomando una instantanea de estos. 
+			La sintaxis es:
+			git commit -m "[explicación de los camibos]"</p>
+
+			<p>git branch 
+			Lo usamos como hemos dicho con antelación para crear branches y colaborar de manera ordenada en un equipo.
+			La sintaxis es:
+			git branch [nombre del branch]</p>
+
+			<p>git checkout
+			Es un comando navegacional, es decir nos sirve para para cambiar de branch dentro de un repositorio.
+			La sintaxis es:
+			git checkout [nombre del branch]</p>
+
+			<p>git merge
+			Cúando has terminado trabajando sobre un branch puedes hacer merge para que tus cambios queden evidenciados en el master y todos puedan apreciar tus cambios.
+			La sintaxis es:
+			git branch [nombre del branch]</p>
+
+			<p>git push
+			Si quieres que tus cambios sean visibles tambén en GitHub harás un push para subir tus cambios a GitHub</p>
+
+			<p>git pull
+			Si estás trabajando sobre un repositorio local pero adviertes que el master remoto ha cambiado o ha sido actualizado, puedes hacer un git pull para reflejar esos cambios en tu master local, es decir, actualizarte.</p>
+			<a class="go-top" href="#">🔝</a>
+			<h2><a name="creaRepositorio">Crea un repositorio nuevo:</a></h2>
 			<p>Un repositorio no es más que el directorio contenedor de tu proyecto (remoto o local) al cual git le hará seguimiento.</p>
 			<p>Creamos un directorio nuevo o elegimos uno existente, lo abrimos y ejecutamos:</p>
 			<p>:~> git init</p>
