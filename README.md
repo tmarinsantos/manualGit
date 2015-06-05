@@ -11,4 +11,4 @@ Objetivos:
 - [x] Usar capturas propias
 - [x] Separar el HTML del CSS
 - [x] Hacer uso de Feature Branch Workflow
-- [ ] Expandir el contenido
+- [x] Expandir el contenido
